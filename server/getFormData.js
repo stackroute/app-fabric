@@ -16,6 +16,11 @@ var deployedAppModel=require("./deployedAppSchema.js");
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var mongoose=require("mongoose");
+var profile="";
+var repoName = function(data){
+  console.log(data);
+  return data;
+};
 
 var events = require('events');
 var reverseProxy = require('./reverseProxy.js');
@@ -46,7 +51,7 @@ io.on("connection",function(socket){
   socket.on("domain",function(data){
     var domain = data.domainName;
     console.log(domain);
-    reverseProxy(domain,socket);
+    reverseProxy(domain,socket,profile);
   });
 	socket.on("deploy", function(data,data1){
       console.log(data1);
@@ -116,7 +121,7 @@ app.post("/update",function(req,res,socket){
 app.get('/auth/github/success', function(req1, res1) {
     // GET code
     var code = req1.query.code;
-    console.log("requeested code is", code);
+    console.log("requested code is", code);
     var oauthUrl = "https://github.com/login/oauth/access_token?client_id=06ae9c621282646f4225&client_secret=8715ba33d34bf0658fe6ae558f20cc8e8de217aa&code=" + code;
 	// GET Authentication Token
     var accessToken = "";
@@ -134,6 +139,7 @@ app.get('/auth/github/success', function(req1, res1) {
                     console.log("Token generated is ", token);
                     console.log("User profile details " + typeof obj + " " + obj.login) // Show the HTML for the Google homepage.
                     res1.cookie('JWT', token, { maxAge: 900000 }).redirect("/#/apps");
+                    profile = obj.login;
                 } else {
                     console.log(response3.statusCode);
                 }

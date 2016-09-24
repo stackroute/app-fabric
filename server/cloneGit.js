@@ -42,6 +42,7 @@ var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch){
 		});	  
 		dockerComposeCommand(path.resolve(cloneDirectoryPath,repoName),socket);
 		storeService(repoName);
+		repoName(repoName);
 	});
 }
 

@@ -266,4 +266,42 @@ deployProject:dockerComposeCommand.stdout::Successfully built b11b41ad6789
 deployProject:dockerComposeCommand.stderr::Recreating reverseproxyconfig_site2_1
 deployProject:dockerComposeCommand.stderr::Recreating reverseproxyconfig_site1_1
 deployProject:dockerComposeCommand.stderr::Recreating reverseproxyconfig_proxy_1
-Closer of docker compose.
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/CloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> 152249e987f4
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> 146488c902c2
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> 7c2b2ac5c0d6
+deployProject:dockerComposeCommand.stdout::Successfully built 7c2b2ac5c0d6
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> 152249e987f4
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> 324a9d093357
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ea50a8ab5a3f
+deployProject:dockerComposeCommand.stdout::Successfully built ea50a8ab5a3f
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b11b41ad6789
+deployProject:dockerComposeCommand.stdout::Successfully built b11b41ad6789
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/CloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
