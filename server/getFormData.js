@@ -18,6 +18,7 @@ var io = require("socket.io")(http);
 var mongoose=require("mongoose");
 
 var events = require('events');
+var reverseProxy = require('./reverseProxy.js');
 // Create an eventEmitter object
 var eventEmitter = new events.EventEmitter();
 io.sockets.on("8080", function(socket) {
@@ -38,10 +39,15 @@ io.on("connection",function(socket){
 	socket.on("baseImageSubmit",function(data,data1){
 		var imageName = data.imageTag;
         var locationName = data1.locationValue;
-		console.log(imageName);
+		    console.log(imageName);
         console.log(locationName);
         deployBase(imageName,deployProject,locationName,socket);
 	});
+  socket.on("domain",function(data){
+    var domain = data.domainName;
+    console.log(domain);
+    reverseProxy(domain,socket);
+  });
 	socket.on("deploy", function(data,data1){
       console.log(data1);
       var gitURL = data.gitURL;

@@ -26,6 +26,7 @@ var BaseImageDetails = React.createClass({
 		return {
 			imageTag: '',
 			locationValue: '',
+			domainName: '',
 			clicked:false
 		};
 			
@@ -36,7 +37,8 @@ var BaseImageDetails = React.createClass({
 	  handleImageChange:function(event){
 	    this.setState({imageTag: event.target.value});
 	    console.log(this.state.imageTag);
-  },
+  }, 	 
+  
   	  handleLocationChange:function(event, index, value){
   	  	console.log('handling location change!!!');
 	    this.setState({locationValue: value});
@@ -47,6 +49,7 @@ var BaseImageDetails = React.createClass({
   		this.setState({clicked : true});
   		console.log("socket " , this.state.imageTag,this.state.locationValue);  		
   		this.context.socket.emit("baseImageSubmit",{imageTag:this.state.imageTag},{locationValue:this.state.locationValue});
+  		
 
   	},
 
@@ -71,7 +74,7 @@ var BaseImageDetails = React.createClass({
 					    <TextField hintText="Image Tag" 
 					    floatingLabelText="Image Tag"
 					    value = {this.state.imageTag} onChange = {this.handleImageChange}/>
-					    <Divider />
+					    <Divider />					    
 					    <SelectField 
 					    	fullWidth={true}
 							hintText="Select the location of your base-image Dockerfile"

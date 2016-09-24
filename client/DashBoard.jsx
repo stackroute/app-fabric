@@ -7,6 +7,7 @@ import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
+import Divider from 'material-ui/Divider';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import DeploymentCard from "./deploymentCard.jsx";
@@ -111,12 +112,13 @@ var DashBoard = React.createClass({
 	handlebranchChange: function(event, index, value){
 		console.log('Branch name value changed');
 		this.setState({branchNameValue: value});
-		console.log(value)
+		console.log(value);
 	},
 	
 	clickedDeploy:function(e){
 	e.preventDefault();
 		this.setState({clicked:true});
+		this.context.socket.emit("domain",{domainName: this.state.domainName});
 	},
 	
 	cloneRepositoryYes :function(e){
@@ -156,6 +158,9 @@ var DashBoard = React.createClass({
 		}.bind(this));
 	},
 
+	handleDomainChange:function(event){
+  		this.setState({domainName: event.target.value});
+  	},
 	
 	componentDidMount: function () {
 
@@ -192,7 +197,12 @@ var DashBoard = React.createClass({
 					hintText="Select any one GIT Branch"                                                                                           
 					maxHeight={200} >
 					{branchItems}
-					</SelectField> 
+					</SelectField>
+					<Divider />
+					    <TextField hintText="Domain Name" 
+					    floatingLabelText="Domain Name"
+					    value = {this.state.domainName}
+					    onChange = {this.handleDomainChange}/> 
 					<RaisedButton label="Primary" primary={true}
 					 style={btnstyle} label="Deploy" secondary={true} 
 					 style={style} type = "submit"
@@ -202,6 +212,7 @@ var DashBoard = React.createClass({
 					<RaisedButton label="Primary" primary={true} style={btnstyle} 
 					label="Service log" secondary={true} style={style} 
 					type = "button" href="/log/app-fabric"/>
+
 				</form >
 			</Paper>
 			{this.state.clicked?<BaseImageCard cloneRepository={this.cloneRepository} yesClicked={this.state.yesClicked}
