@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/appfabric');
+mongoose.connect('mongodb://localhost:27017/appfabric');
 var Schema = mongoose.Schema;
 
 var deployedAppSchema = new Schema({
