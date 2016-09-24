@@ -104,12 +104,15 @@ var DeployedAppDetails = React.createClass({
 		var data = this.state.data.length>0? this.state.data : "Loading";
 		console.log(data)
 		return (			
-			data=="Loading"?null:<MuiThemeProvider muiTheme={muiTheme}>
+			<MuiThemeProvider muiTheme={muiTheme}>
 			<div>
 				<AppHeader />
 				 <RaisedButton style={{margin:'30px 0 30px 45%',textAlign:'center'}} onClick={this.deployProject} label="Deploy New App"/>
-				 <h3 style={{textAlign:'center'}}>List of deployed applications</h3>
-				{deployedApps}
+				 {data=="Loading"?null:
+									 <div>
+										<h3 style={{textAlign:'center'}}>List of deployed applications</h3>
+										{deployedApps}
+				  					 </div>}
 			</div>
 			</MuiThemeProvider>
 			);
