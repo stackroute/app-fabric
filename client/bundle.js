@@ -36980,6 +36980,7 @@
 				branchName: [],
 				locationDetails: [],
 				cookieStatus: false,
+				domainName: '',
 				branchNameValue: '' };
 		},
 
@@ -37117,7 +37118,8 @@
 							_react2.default.createElement(_Divider2.default, null),
 							_react2.default.createElement(_TextField2.default, { hintText: 'Domain Name',
 								floatingLabelText: 'Domain Name',
-								value: this.state.domainName, onChange: this.handleDomainChange }),
+								value: this.state.domainName,
+								onChange: this.handleDomainChange }),
 							_react2.default.createElement(_RaisedButton2.default, (_React$createElement = { label: 'Primary', primary: true,
 								style: btnstyle }, _defineProperty(_React$createElement, 'label', 'Deploy'), _defineProperty(_React$createElement, 'secondary', true), _defineProperty(_React$createElement, 'style', style), _defineProperty(_React$createElement, 'type', 'submit'), _defineProperty(_React$createElement, 'disabled', this.state.gitRepositoryURL.length === 0 || this.state.branchNameValue.length === 0), _React$createElement)),
 							_react2.default.createElement(_RaisedButton2.default, (_React$createElement2 = { label: 'Primary', primary: true, style: btnstyle
@@ -43716,7 +43718,6 @@
 			return {
 				imageTag: '',
 				locationValue: '',
-				domainName: '',
 				clicked: false
 			};
 		},

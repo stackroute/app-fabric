@@ -74,6 +74,7 @@ var DashBoard = React.createClass({
 		branchName: [],
 		locationDetails:[],
 		cookieStatus: false,
+		domainName: '',
 		branchNameValue:'' };
 	},
 

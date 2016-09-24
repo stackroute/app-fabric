@@ -5,13 +5,16 @@ var reverseProxy = function(domain,socket) {
   fs.readFile('./template.conf', 'utf-8', function(err, data){
     if (err) throw err;
     console.log("file is read");
+    console.log(domain);
 
-    var newValue = data.replace("#domanin#", domain).replace("#port#",8080);
+    var newValue = data.replace("#domain#", domain).replace("#port#",8080);
+    console.log(newValue);
 
     fs.writeFile('./reverse-proxy/proxy/root/etc/nginx/conf.d/jyotirmani-site1.conf',
      newValue, 'utf-8', function (err) {
       if (err) throw err;
       console.log('filelistAsync complete');
+
   });
 });
 

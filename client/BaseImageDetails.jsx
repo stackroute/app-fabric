@@ -26,7 +26,6 @@ var BaseImageDetails = React.createClass({
 		return {
 			imageTag: '',
 			locationValue: '',
-			domainName: '',
 			clicked:false
 		};
 			
