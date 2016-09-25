@@ -59,7 +59,7 @@ io.on("connection",function(socket){
       var gitBranch = data1.gitBranch;
       console.log("gitURL ",gitURL);
       console.log("gitBranch",gitBranch);
-      cloneGit(gitURL, deployProject, socket,gitBranch); 
+      cloneGit(gitURL, deployProject, socket,gitBranch,profile); 
   });  
   eventEmitter.on('updated',function(){
 		console.log("inside event emitter");
