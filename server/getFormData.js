@@ -1,3 +1,4 @@
+const spawn = require('child_process').spawn;
 var deployedAppModel = require('./deployedAppSchema.js');
 var jwt = require('jsonwebtoken');
 var jws = require('jws');
@@ -17,10 +18,8 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var mongoose=require("mongoose");
 var profile="";
-var repoName = function(data){
-  console.log(data);
-  return data;
-};
+var repoName = '';
+var gitBranchName = 'master';
 
 var events = require('events');
 var reverseProxy = require('./reverseProxy.js');
@@ -57,20 +56,18 @@ io.on("connection",function(socket){
       console.log(data1);
       var gitURL = data.gitURL;
       var gitBranch = data1.gitBranch;
+      gitBranchName = data1.gitBranch;
       console.log("gitURL ",gitURL);
       console.log("gitBranch",gitBranch);
       cloneGit(gitURL, deployProject, socket,gitBranch,profile); 
   });  
   eventEmitter.on('updated',function(){
 		console.log("inside event emitter");
-		socket.emit("update",{update : true});
-		
-	});
-	
-  
+		socket.emit("update",{update : true});		
+	});  
 });
-var log = require('fs');
 
+var log = require('fs');
 // instruct the app to use the `bodyParser()` middleware for all routes
 app.use(bodyParser());
 app.use(cookieParser());
@@ -95,11 +92,33 @@ app.post("/update",function(req,res,socket){
 
 	
 	deployedAppModel.findById(req.body.app_id, function(err, user) {
+        console.log("user details",process.env.REPOSITORY_PATH+'/' + profile + "-" + user.appName +'/'+user.appName);
         if (err) throw err;
         var a= user.services;
         a.map(function(data){
           if(data._id==req.body.service_id){
            data.replicas = req.body.value;
+             //var scaleUpParams = ['sudo','docker-compose', 'scale',user.serviceName+'='+req.body.value];
+            /*var scaleUpParams = ['hello.py'];
+            const gitCloneCommand = spawn('python',scaleUpParams, {cwd : scaleUpDirectoryPath});
+            */
+            var scaleUpDirectoryPath = path.resolve(process.env.REPOSITORY_PATH)+'/' + profile + "-" + user.appName + "-" + gitBranchName+'/'+user.appName;
+//            var scaleUpDirectoryPath = process.env.REPOSITORY_PATH+'/'+user.appName;
+            console.log('Scaling up path is ',scaleUpDirectoryPath);
+            var scaleUpParams = ['scale',data.serviceName+'='+req.body.value];
+            console.log("scaleUpParams is", scaleUpParams);
+            const gitCloneCommand = spawn('docker-compose',scaleUpParams, {cwd : scaleUpDirectoryPath});
+            console.log("Scaling directory path is ", scaleUpDirectoryPath);
+            gitCloneCommand.stdout.on('data', (data) => {
+              console.log(data);
+            });
+            gitCloneCommand.stderr.on('data', (data) => {
+              console.log(data);
+            });
+            gitCloneCommand.on('close', (code) => {
+              console.log(`child process exited with code ${code}`);
+            });
+
        }
    });
 
@@ -139,7 +158,7 @@ app.get('/auth/github/success', function(req1, res1) {
                     console.log("Token generated is ", token);
                     console.log("User profile details " + typeof obj + " " + obj.login) // Show the HTML for the Google homepage.
                     res1.cookie('JWT', token, { maxAge: 900000 }).redirect("/#/apps");
-                    profile = obj.login;
+                    //profile = obj.login;
                 } else {
                     console.log(response3.statusCode);
                 }
@@ -159,6 +178,8 @@ app.use(function(req, res, next) {
             console.log(err);
         }
         next();
+      console.log("data in JWT verification", data.user.split('/')[1]);
+      profile = data.user.split('/')[1];    
     });
 })
 
@@ -181,6 +202,8 @@ var scope = {
 app.post('/deploy', function(req, res) {
     var gitURL = req.body.gitURL;
     console.log("gitURL ", gitURL);
+    var res = gitURL.split("/");
+    repoName = (res[res.length-1].split("."))[0];
     cloneGit(gitURL, deployProject);
 });
 
