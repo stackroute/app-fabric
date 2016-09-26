@@ -7,12 +7,14 @@ var deployedAppModel=require("./deployedAppSchema.js");
 var filessystem = require('fs');
 
 var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch,username){
-	var cloneDirectoryPath = process.env.REPOSITORY_PATH + '/' + username + "-" + gitBranch;
+	var res = gitURL.split("/");
+	var repoName = (res[res.length-1].split("."))[0];
+	var cloneDirectoryPath = process.env.REPOSITORY_PATH + '/' + username + "-" + repoName + "-" + gitBranch;
 	log.appendFile(logfile, 'CloneGit:REPOSITORY_PATH is:: ' +cloneDirectoryPath, function(error){
 		if (error) return console.log(error);
 	});
 
-	console.log("Current Directory is :", cloneDirectoryPath);
+	console.log("Current Directory path is :", cloneDirectoryPath);
     if (!filessystem.existsSync(cloneDirectoryPath)){
         filessystem.mkdirSync(cloneDirectoryPath);
     }else{
@@ -23,10 +25,6 @@ var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch,username){
 	if(gitBranch) { cloneParams.push('-b'); cloneParams.push(gitBranch); }
 	const gitCloneCommand = spawn('git',cloneParams, {cwd : cloneDirectoryPath});
 
-
-	console.log("Current directory path is ", cloneDirectoryPath);
-	var res = gitURL.split("/");
-	var repoName = (res[res.length-1].split("."))[0];
 	gitCloneCommand.stdout.on('data', (data) => {
 		log.appendFile(logfile, 'CloneGit:Git clone from stdout:: '+data, function(error){
 			if (error) return console.log(error);
@@ -51,7 +49,6 @@ var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch,username){
 		});	  
 		dockerComposeCommand(path.resolve(cloneDirectoryPath,repoName),socket);
 		storeService(repoName);
-//		repoName(repoName);
 	});
 }
 
