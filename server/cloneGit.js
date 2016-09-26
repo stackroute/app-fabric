@@ -48,13 +48,13 @@ var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch,username){
 			socket.emit("clone",{isComplete: true,isInProgress: false});
 		});	  
 		dockerComposeCommand(path.resolve(cloneDirectoryPath,repoName),socket);
-		storeService(repoName);
+		storeService(repoName,cloneDirectoryPath);
 	});
 }
 
-var storeService=function(repoName){
+var storeService=function(repoName,cloneDirectoryPath){
 	
-	var yamldata=log.readFileSync(process.env.REPOSITORY_PATH+"/"+repoName+"/docker-compose.yml",{encoding: 'utf-8'});
+	var yamldata=log.readFileSync(cloneDirectoryPath+"/"+repoName+"/docker-compose.yml",{encoding: 'utf-8'});
 	console.log(yamldata.toString());
 	 obj = yaml.load(yamldata);
 	 console.log(JSON.stringify(obj, null, 2));
