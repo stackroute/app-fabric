@@ -11,6 +11,8 @@ import Divider from 'material-ui/Divider';
 import ActionDone from 'material-ui/svg-icons/action/done';
 import ActionHighlightOff from 'material-ui/svg-icons/action/highlight-off';
 import ToggleRadioButtonUnchecked from 'material-ui/svg-icons/toggle/radio-button-unchecked';
+import Domain from "./domain.jsx";
+
 
 const iconStyles = {
   marginRight: 24,
@@ -21,7 +23,15 @@ const style = {
 };
 
 var deploymentCard = React.createClass({
-  render() {
+
+  getInitialState:function(){
+    return{
+          clickedDomain:false,
+    };
+
+     },
+
+ render() {
     var iconsClone;
     if((!this.props.clone.isInProgress)&&(!this.props.clone.isComplete)){
       iconsClone = (
@@ -63,24 +73,27 @@ var deploymentCard = React.createClass({
   }else if((this.props.deploy.isComplete)&&(!this.props.deploy.isInProgress)){
     iconsDeploy = (
       <ActionDone />
-      )
+      );
   }
 
   return (
-    <Card>
-      <CardHeader
-      title="Deployment In Progress"
-      actAsExpander={true}
-      showExpandableButton={true}
-      />
-      <CardActions>
-        <List>
-          <ListItem primaryText="Cloning" leftIcon={iconsClone} />
-          <ListItem primaryText="Building Base-Image" leftIcon={iconsBase} />
-          <ListItem primaryText="Deploying" leftIcon={iconsDeploy} />
-        </List>              
-      </CardActions>            
-    </Card>
+    <div>
+      <Card>
+        <CardHeader
+        title="Deployment In Progress"
+        actAsExpander={true}
+        showExpandableButton={true}
+        />
+        <CardActions>
+          <List>
+            <ListItem primaryText="Cloning" leftIcon={iconsClone} />
+            <ListItem primaryText="Building Base-Image" leftIcon={iconsBase} />
+            <ListItem primaryText="Deploying" leftIcon={iconsDeploy} />
+          </List>              
+        </CardActions>            
+      </Card>
+      {this.props.deploy.isComplete?<Domain/>:null}
+    </div>
     );
   }
 });

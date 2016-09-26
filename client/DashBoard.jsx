@@ -74,7 +74,7 @@ var DashBoard = React.createClass({
 		branchName: [],
 		locationDetails:[],
 		cookieStatus: false,
-		domainName: '',
+		repoValue:'',
 		branchNameValue:'' };
 	},
 
@@ -118,8 +118,7 @@ var DashBoard = React.createClass({
 	
 	clickedDeploy:function(e){
 	e.preventDefault();
-		this.setState({clicked:true});
-		this.context.socket.emit("domain",{domainName: this.state.domainName});
+	this.setState({clicked:true});
 	},
 	
 	cloneRepositoryYes :function(e){
@@ -158,10 +157,7 @@ var DashBoard = React.createClass({
 			this.setState({deploy : data});
 		}.bind(this));
 	},
-
-	handleDomainChange:function(event){
-  		this.setState({domainName: event.target.value});
-  	},
+	
 	
 	componentDidMount: function () {
 
@@ -198,22 +194,15 @@ var DashBoard = React.createClass({
 					hintText="Select any one GIT Branch"                                                                                           
 					maxHeight={200} >
 					{branchItems}
-					</SelectField>
-					<Divider />
-					    <TextField hintText="Domain Name" 
-					    floatingLabelText="Domain Name"
-					    value = {this.state.domainName}
-					    onChange = {this.handleDomainChange}/> 
+					</SelectField>					 
 					<RaisedButton label="Primary" primary={true}
 					 style={btnstyle} label="Deploy" secondary={true} 
 					 style={style} type = "submit"
 					 disabled={(this.state.gitRepositoryURL.length===0) ||
-                                             (this.state.branchNameValue.length===0)} />
-				
+                                             (this.state.branchNameValue.length===0)} />				
 					<RaisedButton label="Primary" primary={true} style={btnstyle} 
 					label="Service log" secondary={true} style={style} 
 					type = "button" href="/log/app-fabric"/>
-
 				</form >
 			</Paper>
 			{this.state.clicked?<BaseImageCard cloneRepository={this.cloneRepository} yesClicked={this.state.yesClicked}

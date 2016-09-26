@@ -17,6 +17,7 @@ var cloneBase = function(gitURL,socket,gitBranch){
 	console.log(repoName);
 
 	gitCloneCommand.on("close",function(){
+		socket.emit("clone",{isComplete: true,isInProgress: false});
 	   const findDocker = spawn('find',['.' , '-name' , 'Dockerfile'],{cwd : cloneDirectoryPath});
 	   var count = 0;var location = [];
 		findDocker.stdout.on('data', (data) => {

@@ -16,12 +16,7 @@ var deployedAppModel=require("./deployedAppSchema.js");
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var mongoose=require("mongoose");
-var profile="";
-var repoName = function(data){
-  console.log(data);
-  return data;
-};
-
+var profile = "";
 var events = require('events');
 var reverseProxy = require('./reverseProxy.js');
 // Create an eventEmitter object
@@ -33,12 +28,13 @@ var app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 io.on("connection",function(socket){
+  var repoName = {};
 	console.log("we have a connection");	
 	socket.on("baseImage",function(data,data1){
 		 var gitURL = data.gitURL;
 		 var gitBranch = data1.gitBranch;
 		 console.log(gitURL);
-         console.log(gitBranch);
+     console.log(gitBranch);
 		 cloneBase(gitURL,socket,gitBranch);
 	});
 	socket.on("baseImageSubmit",function(data,data1){
@@ -48,11 +44,12 @@ io.on("connection",function(socket){
         console.log(locationName);
         deployBase(imageName,deployProject,locationName,socket);
 	});
-  socket.on("domain",function(data){
+  socket.on("domain",function(data,data1){
     var domain = data.domainName;
     console.log(domain);
     reverseProxy(domain,socket,profile);
   });
+ 
 	socket.on("deploy", function(data,data1){
       console.log(data1);
       var gitURL = data.gitURL;
