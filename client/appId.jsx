@@ -91,11 +91,8 @@ var Replicas=React.createClass({
 var ServicesList=React.createClass({
 	render(){
 		var services = this.props.data.map(function(data, key){
-			
-			console.dir(data);
-			
 			return(
-				<div>
+				<div key={key}>
 					<Card style={cardStyle}>
 						<div>
 							<h5>Service Name: {data.serviceName}</h5> 
@@ -139,9 +136,8 @@ var AppId=React.createClass({
 		var data = this.state.data.length>0? this.state.data : "Loading";
 		console.log(data)
 		var deployedApps=this.state.data.map(function(data,key){
-			console.log("app id is",this.state.app_id);			
 			return(
-				data._id == this.state.app_id ? <MuiThemeProvider muiTheme={muiTheme}>
+				data._id == this.state.app_id ? <MuiThemeProvider muiTheme={muiTheme} key={key}>
 				<div>
 				<AppHeader />
 				<ServicesList data={data.services} appId={data._id}/>					

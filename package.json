@@ -19,6 +19,7 @@
     "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
+    "bower": "^1.7.9",
     "chai": "^3.5.0",
     "cookie-parser": "^1.4.3",
     "js-yaml": "^3.6.1",

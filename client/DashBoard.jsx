@@ -220,7 +220,7 @@ var DashBoard = React.createClass({
 			locationDetails = {this.state.locationDetails} clone={this.state.clone} base={this.state.base} deploy={this.state.deploy}
 			 cloneRepositoryYes = {this.cloneRepositoryYes}/>:null}
 			{this.state.noClicked?<DeploymentCard clone={this.state.clone} base={this.state.base} deploy={this.state.deploy} />:null}                              
-			<h3 align="left"><a href="/log/app-fabric" style={{bottom:'10px',textAlign:'left'}}>Click here to see service log</a></h3>
+			<h3><a href="/log/app-fabric" style={{bottom:'10px',textAlign:'left'}}>Click here to see service log</a></h3>
 		</div>
 		</MuiThemeProvider>
 		);
