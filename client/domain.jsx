@@ -32,6 +32,7 @@ var Domain = React.createClass({
   	},
 
   	emitChange:function(e){
+  		console.log(this.state.domainName);
   		e.preventDefault();
   		this.context.socket.emit("domain",{domainName: this.state.domainName});
   	},
@@ -54,7 +55,7 @@ var Domain = React.createClass({
 					value = { this.state.domainName }
 					onChange = { this.handleDomainChange }
 					/>					
-					<RaisedButton label="Submit" primary={true} style={style} onSubmit={this.emitChange}/>				
+					<RaisedButton label="Submit" primary={true} style={style} onClick={this.emitChange}/>				
 				</Card>
 			</div>
 			);

@@ -19,6 +19,7 @@ var mongoose=require("mongoose");
 var profile = "";
 var events = require('events');
 var reverseProxy = require('./reverseProxy.js');
+var reverseDeploy = require('./reverseDeploy.js');
 // Create an eventEmitter object
 var eventEmitter = new events.EventEmitter();
 io.sockets.on("8080", function(socket) {
@@ -28,14 +29,19 @@ var app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 io.on("connection",function(socket){
-  var repoName = {};
+  const context = {};
 	console.log("we have a connection");	
 	socket.on("baseImage",function(data,data1){
 		 var gitURL = data.gitURL;
 		 var gitBranch = data1.gitBranch;
+     var res = gitURL.split("/");
+     console.log("sdfsfsdf " +(res[res.length-1].split("."))[0]);
+     console.log(context);
+     context.repoName = (res[res.length-1].split("."))[0];
+     context.cloneDirectoryPath = process.env.REPOSITORY_PATH + "/" + profile + "-" + context.repoName + "-" + gitBranch;
 		 console.log(gitURL);
      console.log(gitBranch);
-		 cloneBase(gitURL,socket,gitBranch);
+		 cloneBase(gitURL,socket,gitBranch,profile);
 	});
 	socket.on("baseImageSubmit",function(data,data1){
 		var imageName = data.imageTag;
@@ -44,19 +50,28 @@ io.on("connection",function(socket){
         console.log(locationName);
         deployBase(imageName,deployProject,locationName,socket);
 	});
-  socket.on("domain",function(data,data1){
+  socket.on("domain",function(data){
     var domain = data.domainName;
     console.log(domain);
-    reverseProxy(domain,socket,profile);
+    console.log(context);
+    var repository = context.cloneDirectoryPath;
+    console.log(repository);
+    reverseProxy(domain,socket,profile,repository);
   });
  
 	socket.on("deploy", function(data,data1){
       console.log(data1);
       var gitURL = data.gitURL;
       var gitBranch = data1.gitBranch;
+      var res = gitURL.split("/");
+      console.log("sdfsfsdf " +(res[res.length-1].split("."))[0]);
+      console.log(context);
+      context.repoName = (res[res.length-1].split("."))[0];
+      context.cloneDirectoryPath = process.env.REPOSITORY_PATH + "/" + profile + "-" + context.repoName + "-" + gitBranch;
+
       console.log("gitURL ",gitURL);
       console.log("gitBranch",gitBranch);
-      cloneGit(gitURL, deployProject, socket,gitBranch); 
+      cloneGit(gitURL, deployProject, socket,gitBranch,profile); 
   });  
   eventEmitter.on('updated',function(){
 		console.log("inside event emitter");

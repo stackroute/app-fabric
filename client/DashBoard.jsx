@@ -199,10 +199,12 @@ var DashBoard = React.createClass({
 					 style={btnstyle} label="Deploy" secondary={true} 
 					 style={style} type = "submit"
 					 disabled={(this.state.gitRepositoryURL.length===0) ||
-                                             (this.state.branchNameValue.length===0)} />				
+                                             (this.state.branchNameValue.length===0)} />
+				
 					<RaisedButton label="Primary" primary={true} style={btnstyle} 
 					label="Service log" secondary={true} style={style} 
 					type = "button" href="/log/app-fabric"/>
+
 				</form >
 			</Paper>
 			{this.state.clicked?<BaseImageCard cloneRepository={this.cloneRepository} yesClicked={this.state.yesClicked}

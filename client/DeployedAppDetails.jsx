@@ -24,11 +24,27 @@ import {Router,Route,hashHistory,Link} from "react-router";
 //appid
 import AppId from "./appId.jsx"	
 import AppHeader from "./AppHeader.jsx";
+
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+
 const muiTheme = getMuiTheme({
-	palette: {
-		textColor: cyan500,
-	},
+	
 });
+
+const stylesfloating = {
+ paper: {
+   height: '150px',
+   padding: '30px',
+   backgroundColor: '#90C3D4 ',
+   textAlign:'center'
+ },
+ floatingActionButton: {
+   position: 'absolute',
+   left: '50px',
+   marginTop: '-47px'
+ }
+}
 
 const styles = {
 	title: {
@@ -40,7 +56,7 @@ var CardExampleExpandable =React.createClass ({
 	render(){
 		var services=this.props.data.services.map(function(data,key){
 			return(
-				<div>
+				<div key={key}>
 					<h3>Service Name: {data.serviceName}</h3>
 					<h3>Replicas : {data.replicas}</h3>
 				</div>				
@@ -98,7 +114,7 @@ var DeployedAppDetails = React.createClass({
 	render() {
 		var deployedApps=this.state.data.map(function(data,key){
 			return(
-				<CardExampleExpandable data={data}/>	
+				<CardExampleExpandable data={data} key ={key}/>	
 				)
 		});
 		var data = this.state.data.length>0? this.state.data : "Loading";
@@ -107,10 +123,25 @@ var DeployedAppDetails = React.createClass({
 			<MuiThemeProvider muiTheme={muiTheme}>
 			<div>
 				<AppHeader />
-				 <RaisedButton style={{margin:'30px 0 30px 45%',textAlign:'center'}} onClick={this.deployProject} label="Deploy New App"/>
+				<div style={{backgroundColor:"#e3e3e3"}}>
+				<h1 style={{padding:"30px"}}>Applications</h1>
+				<div style={stylesfloating.floatingActionButton}>
+				
+         <Link onClick={this.deployProject}>
+           <FloatingActionButton zDepth={3}  >
+             <ContentAdd />
+           </FloatingActionButton>
+         </Link>
+       </div>
+	   </div>
+	   
+	   <div>
+	   <br/>
+	   
+	   </div>
+				
 				 {data=="Loading"?null:
-									 <div>
-										<h3 style={{textAlign:'center'}}>List of deployed applications</h3>
+									 <div style={{margin:"30px"}}>
 										{deployedApps}
 				  					 </div>}
 			</div>

@@ -7,30 +7,24 @@ import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
-    width: "50%",
-    margin: '100 100 100 100',
-    textAlign: 'center',
-    display: 'inline-block',
-    padding: '30px'
+   textAlign:"center",
+   marginTop:"200px"
+   
 };
 
 const muiTheme = getMuiTheme({
-    palette: {
-        textColor: cyan500,
-    },
+    
 });
 
 var Login=React.createClass({
     render(){
-        return <div>
+        return <div style={style}>
             <MuiThemeProvider muiTheme={muiTheme}>
-                <center>
-                    <Paper style={style} zDepth={3} >
-                        <h3>Welcome to AppFabric</h3>
-                        <h4>Login with GitHub</h4>
-                               <RaisedButton style={{margin:'30px 0 30px 0',textAlign:'center'}} href="https://github.com/login/oauth/authorize?client_id=06ae9c621282646f4225" label="Continue"/>
-                    </Paper>
-                </center>
+               <div >
+						<h1 style={{color:"#DBE7EB"}}>App Fabric.</h1>
+                        <h3 style={{color:"#DBE7EB"}}>Host your docker-compose applications in few steps</h3>
+                               <RaisedButton style={{margin:'30px 0 30px 0',textAlign:'center'}} href="https://github.com/login/oauth/authorize?client_id=06ae9c621282646f4225" label="Login with GitHub"/>
+                   </div>
             </MuiThemeProvider>
         </div>
     }

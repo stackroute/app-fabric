@@ -84,7 +84,7 @@ render: function() {
 var AppHeader = React.createClass({
 	render(){
 		return(
-      <AppBar
+      <AppBar style={{backgroundColor:"#3A606E"}}
       title="App Fabric"
       iconElementLeft={<IconButton></IconButton>}
       iconElementRight={

@@ -3,8 +3,10 @@ var path = require('path');
 var log = require('fs');
 var logfile = "./deployment_log.log";
 
-var cloneBase = function(gitURL,socket,gitBranch){
-	var cloneDirectoryPath = process.env.REPOSITORY_PATH;
+var cloneBase = function(gitURL,socket,gitBranch,username){
+	var res = gitURL.split("/");
+	var repoName = (res[res.length-1].split("."))[0];
+	var cloneDirectoryPath = process.env.REPOSITORY_PATH + "/" + username + "-" + repoName + "-" + gitBranch;
 	log.appendFile(logfile, "cloneBase:REPOSITORY_PATH is:: " +cloneDirectoryPath,function(error){
 		if(error) return console.log(error);
 	});
@@ -12,8 +14,7 @@ var cloneBase = function(gitURL,socket,gitBranch){
 	if(gitBranch) { cloneParams.push('-b'); cloneParams.push(gitBranch); }
 	const gitCloneCommand = spawn('git',cloneParams, {cwd : cloneDirectoryPath});	
 	console.log("Current directory path is ", cloneDirectoryPath);
-	var res = gitURL.split("/");
-	var repoName = (res[res.length-1].split("."))[0];
+
 	console.log(repoName);
 
 	gitCloneCommand.on("close",function(){

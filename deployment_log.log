@@ -1,0 +1,706 @@
+executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+Step 4 : CMD http-server --port 8080
+ ---> Using cache
+ ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+Step 4 : CMD http-server --port 8080
+ ---> Using cache
+ ---> d7c3bcc4a5e4
+Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/dockerCloneGit:Git clone from stderr:: fatal: destination path 'ReverseProxyConfig' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::reverseproxyconfig_proxy_1 is up-to-date
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/-ReverseProxyConfig-master'...
+executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::Creating param1111reverseproxyconfigmaster_site2_1
+deployProject:dockerComposeCommand.stderr::Creating param1111reverseproxyconfigmaster_site1_1
+deployProject:dockerComposeCommand.stderr::Creating param1111reverseproxyconfigmaster_proxy_1
+deployProject:dockerComposeCommand.stderr::
+ERROR: for proxy  Cannot start service proxy: driver failed programming external connectivity on endpoint param1111reverseproxyconfigmaster_proxy_1 (dde801b4cb992d920cb32473e69b5c5549878fcd239c4fc31e34c5b4fde8b4a0): Bind for 0.0.0.0:80 failed: port is already allocated
+Encountered errors while bringing up the project.
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::Starting param1111reverseproxyconfigmaster_proxy_1
+deployProject:dockerComposeCommand.stderr::
+ERROR: for proxy  Cannot start service proxy: driver failed programming external connectivity on endpoint param1111reverseproxyconfigmaster_proxy_1 (2082117de79379e44ca4c0bbe7483dd9397f3072f204c39bc4596248b8eb7167): Bind for 0.0.0.0:80 failed: port is already allocated
+Encountered errors while bringing up the project.
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: Cloning into '/vagrant/docker/param1111-ReverseProxyConfig-master'...
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::Starting param1111reverseproxyconfigmaster_proxy_1
+deployProject:dockerComposeCommand.stderr::
+ERROR: for proxy  Cannot start service proxy: driver failed programming external connectivity on endpoint param1111reverseproxyconfigmaster_proxy_1 (0e56ea37fdb84d60b755e2f0146d1eadba6d16d064936d2125e5fa21cba57055): Bind for 0.0.0.0:80 failed: port is already allocated
+Encountered errors while bringing up the project.
+Closer of docker compose.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.executing body-parser.CloneGit:REPOSITORY_PATH is:: /vagrant/docker/param1111-ReverseProxyConfig-masterCloneGit:Git clone from stderr:: fatal: destination path '/vagrant/docker/param1111-ReverseProxyConfig-master' already exists and is not an empty directory.
+CloneGit:Done git clone
+deployProject:dockerComposeCommand.stderr::Building site2
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> f74a658b3434
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stdout::Successfully built d7c3bcc4a5e4
+deployProject:dockerComposeCommand.stderr::Building site1
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM mhart/alpine-node:6.3.0
+deployProject:dockerComposeCommand.stdout:: ---> fffb49210fed
+deployProject:dockerComposeCommand.stdout::Step 2 : RUN npm install -g http-server
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> bb9f5e49ec78
+deployProject:dockerComposeCommand.stdout::Step 3 : COPY index.html .
+deployProject:dockerComposeCommand.stdout:: ---> bea96eabea51
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 4 : CMD http-server --port 8080
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout:: ---> ca8647d8522a
+deployProject:dockerComposeCommand.stdout::Successfully built ca8647d8522a
+deployProject:dockerComposeCommand.stderr::Building proxy
+deployProject:dockerComposeCommand.stdout::Step 1 : FROM smebberson/alpine-nginx:3.0.0
+deployProject:dockerComposeCommand.stdout:: ---> 5473ded7a8f3
+deployProject:dockerComposeCommand.stdout:: ---> Using cache
+deployProject:dockerComposeCommand.stdout::Step 2 : ADD root /
+deployProject:dockerComposeCommand.stdout:: ---> b7871780f06f
+deployProject:dockerComposeCommand.stdout::Successfully built b7871780f06f
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site2_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::param1111reverseproxyconfigmaster_site1_1 is up-to-date
+deployProject:dockerComposeCommand.stderr::Starting param1111reverseproxyconfigmaster_proxy_1
+deployProject:dockerComposeCommand.stderr::
+ERROR: for proxy  Cannot start service proxy: driver failed programming external connectivity on endpoint param1111reverseproxyconfigmaster_proxy_1 (a7f326a685d815755cb979221e51b549a873a5a084c9f74a8be22da28ee39d4d): Bind for 0.0.0.0:80 failed: port is already allocated
+Encountered errors while bringing up the project.
+Closer of docker compose.deployProject:dockerComposeCommand.stderr::Creating network "reverseproxy_default" with the default driver
+deployProject:dockerComposeCommand.stderr::Creating reverseproxy_proxy_1
+deployProject:dockerComposeCommand.stderr::
+ERROR: for proxy  Cannot start service proxy: driver failed programming external connectivity on endpoint reverseproxy_proxy_1 (88f3530b423ae7fa8515d189723d82c12524d895360e582301ecc57f2ea3386e): Bind for 0.0.0.0:80 failed: port is already allocated
+Encountered errors while bringing up the project.
+Closer of docker compose.

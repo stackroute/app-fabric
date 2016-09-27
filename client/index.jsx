@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import {Router,Route,hashHistory} from "react-router";
 import Login from "./Login.jsx";
 import DashBoard from "./DashBoard.jsx";
-import DeployedAppDetails from "./deployedAppDetails.jsx";
+import DeployedAppDetails from "./DeployedAppDetails.jsx";
 import AppId from "./appId.jsx"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
