@@ -52,6 +52,7 @@ var cloneGit = function(gitURL, dockerComposeCommand,socket,gitBranch,username){
 var storeService=function(cloneDirectoryPath,repoName){
 	
 	var yamldata=log.readFileSync(cloneDirectoryPath + "/docker-compose.yml",{encoding: 'utf-8'});
+
 	console.log(yamldata.toString());
 	 obj = yaml.load(yamldata);
 	 console.log(JSON.stringify(obj, null, 2));
