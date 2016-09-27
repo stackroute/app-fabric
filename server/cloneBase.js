@@ -10,9 +10,9 @@ var cloneBase = function(gitURL,socket,gitBranch,username){
 	log.appendFile(logfile, "cloneBase:REPOSITORY_PATH is:: " +cloneDirectoryPath,function(error){
 		if(error) return console.log(error);
 	});
-	var cloneParams = ['clone',gitURL];
+	var cloneParams = ['clone',gitURL,cloneDirectoryPath];
 	if(gitBranch) { cloneParams.push('-b'); cloneParams.push(gitBranch); }
-	const gitCloneCommand = spawn('git',cloneParams, {cwd : cloneDirectoryPath});	
+	const gitCloneCommand = spawn('git',cloneParams, {cwd : process.env.REPOSITORY_PATH});
 	console.log("Current directory path is ", cloneDirectoryPath);
 
 	console.log(repoName);

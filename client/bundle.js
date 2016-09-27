@@ -64,11 +64,7 @@
 
 	var _DashBoard2 = _interopRequireDefault(_DashBoard);
 
-<<<<<<< HEAD
 	var _DeployedAppDetails = __webpack_require__(518);
-=======
-	var _DeployedAppDetails = __webpack_require__(524);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _DeployedAppDetails2 = _interopRequireDefault(_DeployedAppDetails);
 
@@ -37116,7 +37112,7 @@
 					this.state.noClicked ? _react2.default.createElement(_deploymentCard2.default, { clone: this.state.clone, base: this.state.base, deploy: this.state.deploy }) : null,
 					_react2.default.createElement(
 						'h3',
-						null,
+						{ align: 'left' },
 						_react2.default.createElement(
 							'a',
 							{ href: '/log/app-fabric', style: { bottom: '10px', textAlign: 'left' } },
@@ -49032,19 +49028,11 @@
 
 	var _AppHeader2 = _interopRequireDefault(_AppHeader);
 
-<<<<<<< HEAD
 	var _FloatingActionButton = __webpack_require__(520);
 
 	var _FloatingActionButton2 = _interopRequireDefault(_FloatingActionButton);
 
 	var _add = __webpack_require__(522);
-=======
-	var _FloatingActionButton = __webpack_require__(526);
-
-	var _FloatingActionButton2 = _interopRequireDefault(_FloatingActionButton);
-
-	var _add = __webpack_require__(528);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _add2 = _interopRequireDefault(_add);
 
@@ -49402,11 +49390,7 @@
 	module.exports = AppId;
 
 /***/ },
-<<<<<<< HEAD
 /* 520 */
-=======
-/* 526 */
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49416,11 +49400,7 @@
 	});
 	exports.default = undefined;
 
-<<<<<<< HEAD
 	var _FloatingActionButton = __webpack_require__(521);
-=======
-	var _FloatingActionButton = __webpack_require__(527);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _FloatingActionButton2 = _interopRequireDefault(_FloatingActionButton);
 
@@ -49429,11 +49409,7 @@
 	exports.default = _FloatingActionButton2.default;
 
 /***/ },
-<<<<<<< HEAD
 /* 521 */
-=======
-/* 527 */
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -49446,11 +49422,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-<<<<<<< HEAD
 	var _simpleAssign = __webpack_require__(394);
-=======
-	var _simpleAssign = __webpack_require__(401);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 
@@ -49458,7 +49430,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	var _transitions = __webpack_require__(396);
 
 	var _transitions2 = _interopRequireDefault(_transitions);
@@ -49478,37 +49449,12 @@
 	var _Paper2 = _interopRequireDefault(_Paper);
 
 	var _childUtils = __webpack_require__(399);
-=======
-	var _transitions = __webpack_require__(403);
-
-	var _transitions2 = _interopRequireDefault(_transitions);
-
-	var _colorManipulator = __webpack_require__(359);
-
-	var _EnhancedButton = __webpack_require__(409);
-
-	var _EnhancedButton2 = _interopRequireDefault(_EnhancedButton);
-
-	var _FontIcon = __webpack_require__(458);
-
-	var _FontIcon2 = _interopRequireDefault(_FontIcon);
-
-	var _Paper = __webpack_require__(399);
-
-	var _Paper2 = _interopRequireDefault(_Paper);
-
-	var _childUtils = __webpack_require__(406);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _warning = __webpack_require__(177);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-<<<<<<< HEAD
 	var _propTypes = __webpack_require__(395);
-=======
-	var _propTypes = __webpack_require__(402);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -49822,11 +49768,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
 /* 522 */
-=======
-/* 528 */
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49839,19 +49781,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	var _pure = __webpack_require__(431);
 
 	var _pure2 = _interopRequireDefault(_pure);
 
 	var _SvgIcon = __webpack_require__(440);
-=======
-	var _pure = __webpack_require__(438);
-
-	var _pure2 = _interopRequireDefault(_pure);
-
-	var _SvgIcon = __webpack_require__(447);
->>>>>>> 746f79dc7467effcb8e2b41adeaa753b82b282d9
 
 	var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
